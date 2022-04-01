@@ -5,7 +5,9 @@ function Guestbook() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
-  const [text, setText] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleButton = () => {};
 
   return (
     <div>
@@ -25,13 +27,15 @@ function Guestbook() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Title"
         />
-        <input
-          type="text"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="your message"
-        />
-        <button>Submit</button>
+        <textarea
+          placeholder="Message"
+          name="message"
+          rows="8"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required={true}
+        ></textarea>
+        <button onClick={(e) => handleButton(e)}>Submit</button>
       </form>
     </div>
   );
