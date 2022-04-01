@@ -2,11 +2,9 @@
 to do
 
 
-- form in Guestbook (E-Mail, Title, Text)
-- show inputs of guestbook 
-- store the entries (local storage?)
-- sort entries by date (newest on top)
-- validation
+
+
+- style
 
 done
 x clean react app
@@ -15,3 +13,5 @@ x use react-router-dom
 x add button styles 
 x create form
 X store and show the post (localStorage works)
+x validation
+x sort entries by date (newest on top)

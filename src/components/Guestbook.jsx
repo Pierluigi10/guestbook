@@ -52,7 +52,7 @@ function Guestbook() {
     } else if (titleIsValid === false || messageIsValid === false) {
       alert("please fill in title and message fields");
     } else {
-      guestbook.push(`${email},${title}, ${message}`);
+      guestbook.unshift(`${email},${title}, ${message}`);
       localStorage.setItem("guestbook", JSON.stringify(guestbook));
       setGuestbook([...guestbook]);
     }
