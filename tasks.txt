@@ -1,9 +1,16 @@
-- clean react app
-- create 2 components (Home, Guestbook) 
-- use react-router-dom 
+
+to do
+
+
 - form in Guestbook (E-Mail, Title, Text)
 - show inputs of guestbook 
 - store the entries (local storage?)
 - sort entries by date (newest on top)
 - validation
 
+done
+x clean react app
+x create 2 components (Home, Guestbook) 
+x use react-router-dom 
+x add button styles 
+x create form
