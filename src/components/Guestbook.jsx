@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../style/guestbook.css";
 import { useNavigate } from "react-router-dom";
 
 const _guestbook = JSON.parse(localStorage.getItem("guestbook"));
@@ -59,34 +60,37 @@ function Guestbook() {
   };
 
   return (
-    <div>
-      <h1>Guestbook</h1>
-      <button onClick={() => navigate("/")}>Home</button>
-
+    <div className="guestbookComponent">
+      <div className="guestbookHeader">
+        <h2>Guestbook</h2>
+        <button onClick={() => navigate("/")}>Home</button>
+      </div>
       <form>
-        <input
-          type="text"
-          value={email}
-          onChange={handleEmail}
-          placeholder="insert your email"
-        />
-        <input
-          type="text"
-          value={title}
-          onChange={handleTitle}
-          placeholder="Title"
-        />
-        <textarea
-          placeholder="Message"
-          name="message"
-          rows="8"
-          value={message}
-          onChange={handleMessage}
-          required={true}
-        ></textarea>
+        <div className="inputArea">
+          <input
+            type="text"
+            value={email}
+            onChange={handleEmail}
+            placeholder="insert your email"
+          />
+          <input
+            type="text"
+            value={title}
+            onChange={handleTitle}
+            placeholder="Title"
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+            rows="8"
+            value={message}
+            onChange={handleMessage}
+            required={true}
+          ></textarea>
+        </div>
         <button onClick={(e) => handleButton(e)}>Submit</button>
       </form>
-      <div>
+      <div className="guestbookPosts">
         {guestbook.map((post, i) => (
           <li key={i}>{post}</li>
         ))}

@@ -1,0 +1,42 @@
+.guestbookComponent {
+  background-color: rgb(194, 179, 179);
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.guestbookHeader {
+  width: 50%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:placeholder {
+  text-align: center;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0.3rem;
+}
+
+.guestbookPosts {
+  background: rgb(190, 184, 184);
+  margin: 10px 0 0 0;
+  padding: 10px;
+  width: 286px;
+  height: 200px;
+  font-size: 1.3rem;
+  overflow: auto;
+}

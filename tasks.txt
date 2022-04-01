@@ -3,9 +3,6 @@ to do
 
 
 
-
-- style
-
 done
 x clean react app
 x create 2 components (Home, Guestbook) 
@@ -15,3 +12,4 @@ x create form
 X store and show the post (localStorage works)
 x validation
 x sort entries by date (newest on top)
+x style + fix Warning: ReactDOM.render with react 18
