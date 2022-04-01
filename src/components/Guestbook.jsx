@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const _guestbook = JSON.parse(localStorage.getItem("guestbook"));
+
 function Guestbook() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
+  const [guestbook, setGuestbook] = useState(
+    _guestbook === null ? [] : _guestbook
+  );
 
-  const handleButton = () => {};
+  const handleButton = () => {
+    guestbook.push(`${email},${title}, ${message}`);
+    localStorage.setItem("guestbook", JSON.stringify(guestbook));
+    setGuestbook([...guestbook]);
+  };
 
   return (
     <div>
@@ -37,6 +46,11 @@ function Guestbook() {
         ></textarea>
         <button onClick={(e) => handleButton(e)}>Submit</button>
       </form>
+      <div>
+        {guestbook.map((post, i) => (
+          <li key={i}>{post}</li>
+        ))}
+      </div>
     </div>
   );
 }

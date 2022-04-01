@@ -14,3 +14,4 @@ x create 2 components (Home, Guestbook)
 x use react-router-dom 
 x add button styles 
 x create form
+X store and show the post (localStorage works)
