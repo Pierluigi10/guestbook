@@ -94,14 +94,16 @@ function Guestbook() {
         <button onClick={(e) => handleButton(e)}>Submit</button>
       </form>
       <div className="guestbookPosts">
-        {guestbook.map((post, i) => (
-          <ul key={i}>
-            <li>{post.email}</li>
-            <li>{post.message}</li>
-            <li>{post.title}</li>
-            <li>{post.index}</li>
-          </ul>
-        ))}
+        {guestbook
+          .sort((a, b) => b.index - a.index)
+          .map((post, i) => (
+            <ul key={i}>
+              <li>{post.email}</li>
+              <li>{post.message}</li>
+              <li>{post.title}</li>
+              <li>{post.index}</li>
+            </ul>
+          ))}
       </div>
     </div>
   );
