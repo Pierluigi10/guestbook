@@ -47,13 +47,16 @@ function Guestbook() {
     setMessage(message);
   };
 
+  const postGuest = { email, title, message, index: guestbook.length };
+
   const handleButton = () => {
     if (emailIsValid === false) {
       alert("please insert a correct email");
     } else if (titleIsValid === false || messageIsValid === false) {
       alert("please fill in title and message fields");
     } else {
-      guestbook.unshift(`${email},${title}, ${message}`);
+      // guestbook.unshift(`${email},${title}, ${message}`);
+      guestbook.push(postGuest);
       localStorage.setItem("guestbook", JSON.stringify(guestbook));
       setGuestbook([...guestbook]);
     }
@@ -92,7 +95,12 @@ function Guestbook() {
       </form>
       <div className="guestbookPosts">
         {guestbook.map((post, i) => (
-          <li key={i}>{post}</li>
+          <ul key={i}>
+            <li>{post.email}</li>
+            <li>{post.message}</li>
+            <li>{post.title}</li>
+            <li>{post.index}</li>
+          </ul>
         ))}
       </div>
     </div>
