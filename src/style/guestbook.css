@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-:placeholder {
+::placeholder {
   text-align: center;
 }
 
@@ -39,4 +39,9 @@ textarea {
   height: 200px;
   font-size: 1.3rem;
   overflow: auto;
+}
+
+.guestbookPosts ul {
+  list-style-type: none;
+  border-bottom: 1px solid brown;
 }

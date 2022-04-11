@@ -98,10 +98,10 @@ function Guestbook() {
           .sort((a, b) => b.index - a.index)
           .map((post, i) => (
             <ul key={i}>
+              <li>entries:{post.index}</li>
               <li>{post.email}</li>
-              <li>{post.message}</li>
               <li>{post.title}</li>
-              <li>{post.index}</li>
+              <li>{post.message}</li>
             </ul>
           ))}
       </div>
